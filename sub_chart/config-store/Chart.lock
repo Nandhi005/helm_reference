@@ -1,0 +1,9 @@
+dependencies:
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 18.8.0
+- name: demo-chart
+  repository: ""
+  version: 0.1.0
+digest: sha256:2fca433ee86085451445fb88f6006bc1569e0a5b426d0f189aecbf5036ddcc6e
+generated: "2026-07-30T11:05:14.076042028Z"
