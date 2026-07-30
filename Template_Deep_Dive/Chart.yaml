@@ -1,0 +1,5 @@
+apiVersion: v2
+name: template_deep_dive
+version: 1.0.0
+type: application
+appVersion: 0.0.1

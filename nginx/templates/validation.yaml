@@ -1,0 +1,7 @@
+{{- if and .Values.securityContext .Values.securityContext.enabled -}}
+{{- $_:= required "securityContext.runAsUSer is required" .Values.securityContext.runAsUser -}}
+{{- $_:= required "securityContext.fsGroup is required" .Values.securityContext.fsGroup -}}
+{{ end }}
+{{- if eq (int .Values.securityContext.runAsUser) 0 }}
+{{ fail "you cannot run as root user" }}
+{{ end }}

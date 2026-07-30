@@ -1,0 +1,5 @@
+list:
+  values:
+    example: {{- list 1 2 3 | toYaml | nindent 6 }}
+
+mydict : {{- dict "name" "nandhish" "name1" (dict "age" "23") | toYaml | nindent 2 -}}

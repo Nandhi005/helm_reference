@@ -1,0 +1,25 @@
+data : hi, this is nandhish
+customname: "nandhish"
+# @param replicacount for number of replicas
+replicaCount: 3
+
+# @param image.name Nginx name
+# @param image.tag Nginx image tag for version
+image:
+  name: nginx
+  tag: "latest"
+# @ param service port configuration
+service:
+  svc1:
+      enabled: true
+      type: ClusterIP
+      port: 80
+      targetPort: 80
+  svc2:
+      type: NodePort
+      port: 8080
+securityContext:
+  enabled: true
+  runAsUser: 1000
+  fsGroup: 2000
+environment: production    

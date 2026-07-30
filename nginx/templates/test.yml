@@ -1,0 +1,11 @@
+nandhish: {{ upper .Values.data }}
+labels:
+  name: {{ .Release.Name }}
+  app: {{ .Chart.Name }}
+{{- if eq .Values.environment "production" }}
+environment: production
+enabled: true
+{{- else }}
+environment: QA
+enabled: False
+{{- end }}
